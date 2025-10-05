@@ -90,6 +90,14 @@
           "attributes": [
             {
               "type": {
+                "text": "number"
+              },
+              "description": "initial count",
+              "name": "count",
+              "default": "3"
+            },
+            {
+              "type": {
                 "text": "string"
               },
               "description": "initial size",

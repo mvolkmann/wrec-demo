@@ -2,7 +2,7 @@ import Wrec, { css, html } from "wrec";
 
 /**
  * This is a counter web component.
- * @xattr {number} [count=3] - initial count
+ * @attr {number} [count=3] - initial count
  *
  * @attr {string} [size="medium"] - initial size
  *
