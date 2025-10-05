@@ -1,0 +1,241 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/my-counter.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "This is a counter web component.",
+          "name": "MyCounter",
+          "cssProperties": [
+            {
+              "description": "background color of the buttons",
+              "name": "--button-bg-color",
+              "default": "lightgreen"
+            },
+            {
+              "description": "has no default value",
+              "name": "--my-property"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "Styles the color of bar",
+              "name": "bar"
+            }
+          ],
+          "slots": [
+            {
+              "description": "default, unnamed slot",
+              "name": ""
+            },
+            {
+              "description": "optionally add elements here",
+              "name": "slotName"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "count",
+              "type": {
+                "text": "number"
+              },
+              "default": "0"
+            },
+            {
+              "kind": "method",
+              "name": "decrement"
+            },
+            {
+              "type": {
+                "text": "boolean"
+              },
+              "description": "first prop",
+              "name": "prop1",
+              "kind": "field"
+            },
+            {
+              "type": {
+                "text": "number"
+              },
+              "description": "second prop",
+              "name": "prop2",
+              "kind": "field"
+            }
+          ],
+          "events": [
+            {
+              "description": "description of when this event is fired",
+              "name": "first"
+            },
+            {
+              "type": {
+                "text": "FooEvent"
+              },
+              "description": "fired when the moon is full",
+              "name": "foo"
+            },
+            {
+              "type": {
+                "text": "BarEvent"
+              },
+              "description": "fired when the tide is high",
+              "name": "bar"
+            }
+          ],
+          "attributes": [
+            {
+              "type": {
+                "text": "string"
+              },
+              "description": "initial size",
+              "name": "size",
+              "default": "\"medium\""
+            },
+            {
+              "type": {
+                "text": "string"
+              },
+              "description": "description for foo",
+              "name": "foo"
+            },
+            {
+              "default": 7,
+              "description": "initial value",
+              "fieldName": "count",
+              "name": "count",
+              "type": "Number"
+            }
+          ],
+          "superclass": {
+            "name": "Wrec",
+            "package": "wrec"
+          },
+          "tagName": "my-counter",
+          "customElement": true,
+          "summary": "This is a summary."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MyCounter",
+          "declaration": {
+            "name": "MyCounter",
+            "module": "src/my-counter.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "my-counter",
+          "declaration": {
+            "name": "MyCounter",
+            "module": "src/my-counter.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/my-fetcher.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "This fetches text or JSON from a given URL.",
+          "name": "MyFetcher",
+          "members": [
+            {
+              "kind": "method",
+              "name": "fetch"
+            }
+          ],
+          "attributes": [
+            {
+              "default": "https://jsonplaceholder.typicode.com/posts/1",
+              "description": "URL to be fetched",
+              "fieldName": "url",
+              "name": "url",
+              "type": "String"
+            }
+          ],
+          "superclass": {
+            "name": "Wrec",
+            "package": "wrec"
+          },
+          "tagName": "my-fetcher",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "my-fetcher",
+          "declaration": {
+            "name": "MyFetcher",
+            "module": "src/my-fetcher.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/stories/my-counter.stories.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "meta",
+          "type": {
+            "text": "Meta<MyCounter>"
+          },
+          "default": "{ title: \"Components/MyCounter\", component: \"my-counter\", tags: [\"autodocs\"], args, argTypes, render: (args) => template(args), parameters: { actions: { handles: events, }, }, }"
+        },
+        {
+          "kind": "variable",
+          "name": "Default",
+          "type": {
+            "text": "Story"
+          },
+          "default": "{}"
+        },
+        {
+          "kind": "variable",
+          "name": "Specified",
+          "type": {
+            "text": "Story"
+          },
+          "default": "{ render: (args) => { const element = document.createElement(\"my-counter\"); if (args.count >= 0) { element.setAttribute(\"count\", args.count.toString()); } return element; }, args: { count: 5 }, }"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "meta",
+            "module": "src/stories/my-counter.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Default",
+          "declaration": {
+            "name": "Default",
+            "module": "src/stories/my-counter.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Specified",
+          "declaration": {
+            "name": "Specified",
+            "module": "src/stories/my-counter.stories.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
