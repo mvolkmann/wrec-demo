@@ -34,6 +34,8 @@ export class MyCounter extends Wrec {
 
   static properties = {
     count: { doc: "initial value", type: Number, reflect: true, value: 7 },
+    onClick: { type: Function },
+    onDecremented: { type: Function },
   };
 
   static css = css`
@@ -75,6 +77,11 @@ export class MyCounter extends Wrec {
 
   decrement() {
     if (this.count > 0) this.count--;
+
+    // This is my attempt to get something to appear
+    // in the Storybook "Actions" tab, but nothing does.
+    this.onClick();
+    this.onDecremented();
   }
 }
 
