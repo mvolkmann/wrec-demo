@@ -117,6 +117,18 @@
               "fieldName": "count",
               "name": "count",
               "type": "Number"
+            },
+            {
+              "description": "",
+              "fieldName": "onClick",
+              "name": "onClick",
+              "type": "Function"
+            },
+            {
+              "description": "",
+              "fieldName": "onDecremented",
+              "name": "onDecremented",
+              "type": "Function"
             }
           ],
           "superclass": {
@@ -199,7 +211,7 @@
           "type": {
             "text": "Meta<MyCounter>"
           },
-          "default": "{ title: \"Components/MyCounter\", component: \"my-counter\", tags: [\"autodocs\"], args, argTypes, render: (args) => template(args), parameters: { actions: { handles: events, }, }, }"
+          "default": "{ title: \"Components/MyCounter\", component: \"my-counter\", tags: [\"autodocs\"], args: { ...args, // This is my attempt to get something to appear // in the Storybook \"Actions\" tab, but nothing does. onClick: fn(\"onClick\"), onDecrement: fn(\"onClick\"), }, argTypes, render: (args) => template(args), parameters: { actions: { handles: events, }, }, }"
         },
         {
           "kind": "variable",
