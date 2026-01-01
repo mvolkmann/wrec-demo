@@ -1,4 +1,4 @@
-import Wrec, { html } from "wrec";
+import { html, Wrec } from "wrec";
 
 /**
  * This fetches text or JSON from a given URL.

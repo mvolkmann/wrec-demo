@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "allowImportingTsExtensions": true,
-    "experimentalDecorators": true,
     "noEmit": true,
     "module": "NodeNext",
     "moduleResolution": "nodenext",
