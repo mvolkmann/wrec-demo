@@ -14,8 +14,9 @@ const meta: Meta<MyCounter> = {
     ...args,
     // This is my attempt to get something to appear
     // in the Storybook "Actions" tab, but nothing does.
-    onClick: fn("onClick"),
-    onDecrement: fn("onClick"),
+    // This causes the error "cannot spy on a non-function value".
+    //onClick: fn("onClick"),
+    //onDecrement: fn("onClick"),
   },
   argTypes,
   render: (args) => template(args),
